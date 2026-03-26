@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Pake font baru */
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Latar belakang default kalau gambar gagal loading */
+    background: #1a1a1a; 
+    /* Sistem background gambar */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.8s ease-in-out; /* Transisi halus */
+}
+
+.card {
+    width: 90%;
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.1); /* Transparan */
+    backdrop-filter: blur(15px); /* Efek Kaca */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 35px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+/* Bagian Pencarian */
+.search {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.2);
+    border: 0;
+    outline: 0;
+    color: #fff;
+    padding: 12px 20px;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 16px;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+button {
+    border: 0;
+    outline: 0;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Bagian Ikon Utama */
+.weather-icon-container {
+    font-size: 90px;
+    margin: 10px 0;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3));
+}
+
+/* Tipografi Cuaca */
+.weather h1 {
+    font-size: 70px;
+    font-weight: 600;
+}
+
+.weather h2 {
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+#description {
+    text-transform: capitalize;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+}
+
+/* Bagian Detail (Kelembapan & Angin) */
+.details {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 25px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 12px;
+}
+
+.col i {
+    font-size: 24px;
+}
+
+.col p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.col p:last-child {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: -3px;
+}
