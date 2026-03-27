@@ -15,7 +15,7 @@ async function checkWeather(city) {
             return;
         }
 
-        console.log(data); // Untuk debug di console
+        console.log(data); // Untuk debug di console browser
 
         // 1. Update Teks UI Dasar
         document.querySelector("#city").innerHTML = data.name;
@@ -30,7 +30,7 @@ async function checkWeather(city) {
         const kondisi = data.weather[0].main;
         
         // Map kondisi cuaca ke Ikon FontAwesome dan Gambar Background
-        // Catatan: Saya pakai URL gambar resolusi tinggi dari Unsplash yang gratis
+        // Saya pakai URL gambar resolusi tinggi dari Unsplash yang gratis
         let iconClass = "";
         let bgImage = "";
 
@@ -57,9 +57,9 @@ async function checkWeather(city) {
             bgImage = "https://images.unsplash.com/photo-1496180727794-817822f65950?q=80&w=1920";
         }
 
-        // Terapkan Perubahan
+        // Terapkan Perubahan Ikon dan Background
         mainIcon.className = iconClass; // Ganti class ikon
-        document.body.style.backgroundImage = `url('${bgImage}')`; // Ganti background
+        document.body.style.backgroundImage = `url('${bgImage}')`; // Ganti background body
 
     } catch (error) {
         console.error("Terjadi masalah koneksi:", error);
@@ -78,5 +78,5 @@ searchBox.addEventListener("keypress", (e) => {
     }
 });
 
-// Opsional: Jalankan default kota saat pertama buka
-checkWeather("Jakarta");
+// Jalankan default kota saat pertama buka (Contoh: Klaten)
+checkWeather("Klaten");

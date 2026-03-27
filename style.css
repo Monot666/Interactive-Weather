@@ -10,7 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Latar belakang default kalau gambar gagal loading */
+    /* Warna latar default kalau gambar gagal dimuat */
     background: #1a1a1a; 
     /* Sistem background gambar */
     background-size: cover;
@@ -23,7 +23,7 @@ body {
     width: 90%;
     max-width: 420px;
     background: rgba(255, 255, 255, 0.1); /* Transparan */
-    backdrop-filter: blur(15px); /* Efek Kaca */
+    backdrop-filter: blur(15px); /* Efek Kaca Buram */
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: #fff;
     padding: 35px;
